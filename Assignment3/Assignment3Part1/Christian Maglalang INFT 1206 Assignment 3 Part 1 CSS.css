@@ -5,3 +5,32 @@
 	Date: February 23, 2024
 	Description: 
 */
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  h1 {
+	color: hotpink;
+	font-size: 2em;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	border-bottom: 10px solid purple;
+	border-bottom-style: dotted;
+  }
+  
+  h2 {
+	font-size: 1.5em;
+  }
+  
+  .job-title {
+	color: #999999;
+	font-weight: bold;
+  }
+  
+  a:link, a:visited {
+	color: #fb6542;
+  }
+  
+  a:hover {
+	text-decoration: none;
+  }
