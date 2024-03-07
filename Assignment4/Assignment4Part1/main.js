@@ -43,20 +43,20 @@ function result() {
     let zItem = randomValueFromArray(insertZ)
 
     newStory = newStory.replaceAll(":insertx:", xItem)
-    newStory = newStory.replace(":inserty:", yItem)
-    newStory = newStory.replace(":insertz:", zItem)
+    newStory = newStory.replaceAll(":inserty:", yItem)
+    newStory = newStory.replaceAll(":insertz:", zItem)
 
     if(customName.value !== '') {
         const name = customName.value;
-        newStory = newStory.replace("Bob", name)
+        newStory = newStory.replaceAll("Bob", name)
     }
 
     if(document.getElementById("uk").checked) {
         const weight = Math.round(300 / 14) + " stone";
         const temperature =  Math.round((94 - 32) / 1.8) + " centigrade";
 
-        newStory = newStory.replace("300 pounds", weight)
-        newStory = newStory.replace("94 fahrenheit", temperature)
+        newStory = newStory.replaceAll("300 pounds", weight)
+        newStory = newStory.replaceAll("94 fahrenheit", temperature)
     }
 
     story.textContent = newStory;
