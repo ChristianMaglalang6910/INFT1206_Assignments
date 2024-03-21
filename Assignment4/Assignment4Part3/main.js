@@ -1,9 +1,9 @@
 /*
-	Name: Christian Maglalang
-    Student Number: 100911001
-	File: INFT 1206 Assignment 4 Part 3
-	Date: March 22, 2024
-	Description: Follow tutorial to make use of the canvas api to draw balls on the screen.
+  Name: Christian Maglalang
+  Student Number: 100911001
+  File: INFT 1206 Assignment 4 Part 3
+  Date: March 22, 2024
+  Description: Follow tutorial to make use of the canvas api to draw balls on the screen.
 */
 
 // setup canvas
@@ -27,7 +27,8 @@ function randomRGB() {
   return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
 }
 
-// ball class
+
+// Ball class
 class Ball {
   constructor(x, y, velX, velY, color, size) {
     this.x = x;
@@ -82,6 +83,7 @@ class Ball {
   
 }
 
+
 // Ball list
 const balls = [];
 
@@ -102,6 +104,8 @@ while (balls.length < 25) {
   balls.push(ball);
 }
 
+
+// Function that animates balls
 function loop() {
   ctx.fillStyle = "rgb(0 0 0 / 25%)";
   ctx.fillRect(0, 0, width, height);
@@ -115,4 +119,5 @@ function loop() {
   requestAnimationFrame(loop);
 }
 
+// Execute loop function
 loop();
