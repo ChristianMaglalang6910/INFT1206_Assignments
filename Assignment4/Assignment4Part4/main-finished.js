@@ -1,5 +1,5 @@
 /*
-	Name: Christian Maglalang
+   Name: Christian Maglalang
    Student Number: 100911001
 	File: INFT 1206 Assignment 4 Part 4
 	Date: March 22, 2024
@@ -29,6 +29,7 @@ function randomRGB() {
 return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
 }
 
+
 // Shape class
 class Shape {
 
@@ -40,6 +41,7 @@ class Shape {
    }
 
 }
+
 
 // Ball class
 class Ball extends Shape {
@@ -95,6 +97,7 @@ class Ball extends Shape {
    }
    
 }
+
 
 // Evil Circle class
 class EvilCircle extends Shape {
@@ -167,6 +170,7 @@ class EvilCircle extends Shape {
 
 }
 
+
 // Ball list
 const balls = [];
 
@@ -188,6 +192,7 @@ balls.push(ball);
 count++;
 para.textContent = 'Ball count: ' + count;
 }
+
 
 // Create evil circle
 const evilBall = new EvilCircle(random(0, width), random(0, height));
@@ -212,5 +217,6 @@ evilBall.collisionDetect();
 requestAnimationFrame(loop);
 }
 
+// Execute loop function
 loop();
 
