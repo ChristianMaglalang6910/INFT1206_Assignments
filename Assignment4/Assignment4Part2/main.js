@@ -6,12 +6,16 @@
 	Description: 
 */
 
-/* Functions */
-function nextImage({ target }) {
-	displayedImage.setAttribute('src', target.getAttribute('src'));
-	displayedImage.setAttribute('alt', target.getAttribute('alt'));
+function darkenImage() {
+	const image = btn.getAttribute('class')
+	if (image === 'dark') {
+		overlay.backgroundColor = 'rgba(0,0,0,1)'
+		btn.setAttribute('class', 'light')
+	} else {
+		overlay.style.backgroundColor = 'rgba(0,0,0,0)'
+		btn.setAttribute('class', 'dark')
+	}
 }
-
 const displayedImage = document.querySelector('.displayed-img');
 const thumbBar = document.querySelector('.thumb-bar');
 
@@ -31,12 +35,31 @@ const imageText = {
 };
 
 /* Looping through images */
+function nextImage({ target }) {
+	displayedImage.setAttribute('src', target.getAttribute('src'))
+	displayedImage.setAttribute('alt', target.getAttribute('alt'))
+}
+
 images.forEach((image) => {
 	const makeImage = document.createElement('img')
 	makeImage.setAttribute('src', `images/${image}`)
 	makeImage.setAttribute('alt', imageText[image])
 	thumbBar.appendChild(makeImage)
-	makeImage.addEventListener('click', nextImage);
+	makeImage.addEventListener('click', nextImage)
 })
 
 /* Wiring up the Darken/Lighten button */
+function darkenImage() {
+	let brightness = btn.getAttribute('class')
+	if (brightness === 'dark') {
+		overlay.style.backgroundColor = 'rgba(0,0,0,0.5)'
+		btn.setAttribute('class', 'lit')
+		btn.textContent = 'Lighten'
+	} else {
+		overlay.style.backgroundColor = 'rgba(0,0,0,0)'
+		btn.setAttribute('class', 'dark')
+		btn.textContent = 'Darken'
+	}
+}
+
+btn.addEventListener('click', darkenImage)
