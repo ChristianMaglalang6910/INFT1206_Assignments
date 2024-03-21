@@ -82,8 +82,10 @@ class Ball {
   
 }
 
+// Ball list
 const balls = [];
 
+// While loop that creates balls
 while (balls.length < 25) {
   const size = random(10, 20);
   const ball = new Ball(
