@@ -29,6 +29,7 @@ function randomRGB() {
 return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
 }
 
+// Shape class
 class Shape {
 
    constructor(x, y, velX, velY) {
@@ -40,6 +41,7 @@ class Shape {
 
 }
 
+// Ball class
 class Ball extends Shape {
 
    constructor(x, y, velX, velY, color, size) {
@@ -94,6 +96,7 @@ class Ball extends Shape {
    
 }
 
+// Evil Circle class
 class EvilCircle extends Shape {
 
    constructor(x, y) {
@@ -164,8 +167,10 @@ class EvilCircle extends Shape {
 
 }
 
+// Ball list
 const balls = [];
 
+// loop that generates balls.
 while (balls.length < 25) {
    const size = random(10,20);
    const ball = new Ball(
