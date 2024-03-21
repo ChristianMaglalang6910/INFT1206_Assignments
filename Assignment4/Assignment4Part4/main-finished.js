@@ -1,6 +1,6 @@
 /*
 	Name: Christian Maglalang
-    Student Number: 100911001
+   Student Number: 100911001
 	File: INFT 1206 Assignment 4 Part 4
 	Date: March 22, 2024
 	Description: Update the ball program by adding an evil ball that eats any other bouncing balls.
@@ -189,8 +189,10 @@ count++;
 para.textContent = 'Ball count: ' + count;
 }
 
+// Create evil circle
 const evilBall = new EvilCircle(random(0, width), random(0, height));
 
+// Function that animates balls
 function loop() {
 ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
 ctx.fillRect(0, 0, width, height);
