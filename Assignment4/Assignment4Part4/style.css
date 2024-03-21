@@ -3,7 +3,7 @@
     Student Number: 100911001
 	File: INFT 1206 Assignment 4 Part 4
 	Date: March 22, 2024
-	Description:
+	Description: Update the ball program by adding an evil ball that eats any other bouncing balls.
 */
 
 html, body {
@@ -31,3 +31,12 @@ h1 {
     color: transparent;
     text-shadow: 0 0 4px white;
 }
+
+p {
+    position: absolute;
+    margin: 0;
+    top: 35px;
+    right: 5px;
+    color: #aaa;
+  }
+  
