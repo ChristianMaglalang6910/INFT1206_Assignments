@@ -1,3 +1,11 @@
+/*
+	Name: Christian Maglalang
+  Student Number: 100911001
+	File: INFT 1206 Assignment 5
+	Date: April 15, 2024
+  Description: Troubleshoot the following website so that it includes web accessibility.
+	*/
+
 // functionality for showing/hiding the comments section
 
 const showHideBtn = document.querySelector('.show-hide');
