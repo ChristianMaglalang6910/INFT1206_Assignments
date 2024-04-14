@@ -16,6 +16,18 @@ showHideBtn.onclick = function() {
   }
 };
 
+showHideBtn.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    let showHideText = showHideBtn.textContent;
+    if(showHideText === 'Show comments') {
+      showHideBtn.textContent = 'Hide comments';
+      commentWrapper.style.display = 'block';
+    } else {
+      showHideBtn.textContent = 'Show comments';
+      commentWrapper.style.display = 'none';
+    }
+  }
+});
 // functionality for adding a new comment via the comments form
 
 const form = document.querySelector('.comment-form');
